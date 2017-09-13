@@ -5,9 +5,11 @@
 //  Created by Andrew Madsen on 6/2/13.
 //  Copyright (c) 2013 Open Reel Software. All rights reserved.
 //
-
+#import <Foundation/NSRange.h>
 #import "ORSSoundboardViewController.h"
 #import <MIKMIDI/MIKMIDI.h>
+#import <MIKMIDI/MIKMIDISequence.h>
+#import <MIKMIDI/MIKMIDIPlayer.h>
 
 @interface ORSSoundboardViewController ()
 
@@ -33,6 +35,44 @@
 		[button addTarget:self action:@selector(pianoKeyUp:) forControlEvents:UIControlEventTouchUpOutside];
 		[button addTarget:self action:@selector(pianoKeyUp:) forControlEvents:UIControlEventTouchCancel];
 	}
+    
+    NSString *itunesDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *midiPath = [NSString stringWithFormat:@"%@/%@", itunesDir,  @"song.mid"];
+    NSURL *midiUrl = [NSURL fileURLWithPath:midiPath];
+    
+    NSError* err;
+    MIKMIDISequence* sequence = [MIKMIDISequence sequenceWithFileAtURL:midiUrl error:&err];
+    MIKMIDISequencer *sequencer = [MIKMIDISequencer sequencerWithSequence:sequence];
+    NSURL *soundfontURL = [[NSBundle mainBundle] URLForResource:@"MagicSFver2" withExtension:@"sf2"];
+    
+    
+//    self.sequencer.sequence = sequence;
+//    for (MIKMIDITrack *track in sequence.tracks) {
+//        MIKMIDISynthesizer *synth = [self.sequencer builtinSynthesizerForTrack:track];
+//        XCTAssertNotNil(synth, @"-builtinSynthesizerForTrack: test failed, because it returned nil.");
+//    }
+
+    
+    for (MIKMIDITrack *track in sequence.tracks) {
+        NSArray *trackEvents = [track events];
+        u_char instId = 0;
+        for (MIKMIDIEvent *event in trackEvents)
+        {
+            if (event.eventType == MIKMIDIEventTypeMIDIProgramChangeMessage)
+            {
+                NSData *instData = [event.data subdataWithRange: NSMakeRange(1, 1)];
+                instId = CFSwapInt32BigToHost(*(u_char*)([instData bytes]));
+            }
+        }
+        MIKMIDISynthesizer *synth = [sequencer builtinSynthesizerForTrack:track];
+        NSError *error = @"";
+        if (![synth loadSoundfontFromFileAtURL:soundfontURL presetID:instId error:&error]) {
+            NSLog(@"Error loading soundfont (%@) into synthesizer for track (%@): %@", soundfontURL, track, sequencer);
+        }
+    }
+    [sequencer startPlayback];
+    
+    
 }
 
 #pragma mark - Actions
@@ -41,7 +81,7 @@
 {
 	UInt8 note = 60 + [sender tag];
 	MIKMIDINoteOnCommand *noteOn = [MIKMIDINoteOnCommand noteOnCommandWithNote:note velocity:127 channel:0 timestamp:[NSDate date]];
-	[self.synthesizer handleMIDIMessages:@[noteOn]];
+    [self.synthesizer handleMIDIMessages:@[noteOn]];
 }
 
 - (IBAction)pianoKeyUp:(id)sender

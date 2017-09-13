@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400DACCA1F679E2700A73A7C /* Grand Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 400DACC91F679E2700A73A7C /* Grand Piano.sf2 */; };
+		40DD67941F67DEA900C7E4B9 /* 8MBGMSFX.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 40DD67931F67DEA900C7E4B9 /* 8MBGMSFX.sf2 */; };
+		40DD67961F67F29C00C7E4B9 /* MagicSFver2.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 40DD67951F67F29C00C7E4B9 /* MagicSFver2.sf2 */; };
 		9D6BF5AC175C3A0D00DF6B15 /* ORSSplitViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BF5AB175C3A0D00DF6B15 /* ORSSplitViewManager.m */; };
 		9D6BF5AF175C3C9900DF6B15 /* ORSSoundboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BF5AE175C3C9900DF6B15 /* ORSSoundboardViewController.m */; };
 		9D6BF5E2175EA60E00DF6B15 /* Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6BF5E1175EA60E00DF6B15 /* Black.png */; };
@@ -15,7 +18,7 @@
 		9D6BF603175EAFE500DF6B15 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6BF602175EAFE500DF6B15 /* AVFoundation.framework */; };
 		9D7B3BC81CFF7B5000822CE3 /* MIKMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7B3BC51CFF7B4600822CE3 /* MIKMIDI.framework */; };
 		9D7B3BC91CFF7B5000822CE3 /* MIKMIDI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7B3BC51CFF7B4600822CE3 /* MIKMIDI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9D7B3BCE1CFF7E8D00822CE3 /* Grand Piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano.sf2 */; };
+		9D7B3BCE1CFF7E8D00822CE3 /* Grand Piano0.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano0.sf2 */; };
 		9D8E68B3175C1A6A006546F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E68B2175C1A6A006546F6 /* UIKit.framework */; };
 		9D8E68B5175C1A6A006546F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E68B4175C1A6A006546F6 /* Foundation.framework */; };
 		9D8E68B7175C1A6A006546F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D8E68B6175C1A6A006546F6 /* CoreGraphics.framework */; };
@@ -79,6 +82,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		400DACC91F679E2700A73A7C /* Grand Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grand Piano.sf2"; sourceTree = "<group>"; };
+		40DD67931F67DEA900C7E4B9 /* 8MBGMSFX.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8MBGMSFX.sf2; sourceTree = "<group>"; };
+		40DD67951F67F29C00C7E4B9 /* MagicSFver2.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MagicSFver2.sf2; sourceTree = "<group>"; };
 		9D6BF5AA175C3A0D00DF6B15 /* ORSSplitViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSplitViewManager.h; sourceTree = "<group>"; };
 		9D6BF5AB175C3A0D00DF6B15 /* ORSSplitViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSSplitViewManager.m; sourceTree = "<group>"; };
 		9D6BF5AD175C3C9900DF6B15 /* ORSSoundboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSSoundboardViewController.h; sourceTree = "<group>"; };
@@ -89,7 +95,7 @@
 		9D6BF5E6175EA6F300DF6B15 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9D6BF602175EAFE500DF6B15 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9D7B3BBC1CFF7B4600822CE3 /* MIKMIDI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MIKMIDI.xcodeproj; path = ../../../Framework/MIKMIDI.xcodeproj; sourceTree = "<group>"; };
-		9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grand Piano.sf2"; sourceTree = "<group>"; };
+		9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano0.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grand Piano0.sf2"; sourceTree = "<group>"; };
 		9D8E68AF175C1A6A006546F6 /* MIDI Soundboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MIDI Soundboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8E68B2175C1A6A006546F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9D8E68B4175C1A6A006546F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,9 +197,12 @@
 		9D8E68E2175C1AB3006546F6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40DD67951F67F29C00C7E4B9 /* MagicSFver2.sf2 */,
+				40DD67931F67DEA900C7E4B9 /* 8MBGMSFX.sf2 */,
+				400DACC91F679E2700A73A7C /* Grand Piano.sf2 */,
 				9D8E68F5175C1ABA006546F6 /* Storyboards and XIBs */,
 				9D8E68E9175C1AB3006546F6 /* Images */,
-				9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano.sf2 */,
+				9D7B3BCD1CFF7E8D00822CE3 /* Grand Piano0.sf2 */,
 				9D8E68ED175C1AB3006546F6 /* MIDI Soundboard-Info.plist */,
 				9D8E68E3175C1AB3006546F6 /* InfoPlist.strings */,
 			);
@@ -282,6 +291,11 @@
 				CLASSPREFIX = MIK;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Mixed In Key";
+				TargetAttributes = {
+					9D8E68AE175C1A6A006546F6 = {
+						DevelopmentTeam = E8N96C6G6N;
+					};
+				};
 			};
 			buildConfigurationList = 9D8E68AA175C1A6A006546F6 /* Build configuration list for PBXProject "MIDI Soundboard" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -338,10 +352,13 @@
 				9D8E68EE175C1AB3006546F6 /* InfoPlist.strings in Resources */,
 				9D8E68EF175C1AB3006546F6 /* MainStoryboard_iPad.storyboard in Resources */,
 				9D8E68F0175C1AB3006546F6 /* MainStoryboard_iPhone.storyboard in Resources */,
-				9D7B3BCE1CFF7E8D00822CE3 /* Grand Piano.sf2 in Resources */,
+				9D7B3BCE1CFF7E8D00822CE3 /* Grand Piano0.sf2 in Resources */,
 				9D8E68F1175C1AB3006546F6 /* Default-568h@2x.png in Resources */,
 				9D8E68F2175C1AB3006546F6 /* Default.png in Resources */,
+				400DACCA1F679E2700A73A7C /* Grand Piano.sf2 in Resources */,
 				9D8E68F3175C1AB3006546F6 /* Default@2x.png in Resources */,
+				40DD67961F67F29C00C7E4B9 /* MagicSFver2.sf2 in Resources */,
+				40DD67941F67DEA900C7E4B9 /* 8MBGMSFX.sf2 in Resources */,
 				9D6BF5E2175EA60E00DF6B15 /* Black.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +479,7 @@
 		9D8E68D6175C1A6A006546F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = E8N96C6G6N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sources/MIDI Soundboard-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -481,6 +499,7 @@
 		9D8E68D7175C1A6A006546F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = E8N96C6G6N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sources/MIDI Soundboard-Prefix.pch";
 				HEADER_SEARCH_PATHS = (

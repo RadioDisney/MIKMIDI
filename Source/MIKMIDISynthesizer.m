@@ -131,6 +131,11 @@
 
 - (BOOL)loadSoundfontFromFileAtURL:(NSURL *)fileURL error:(NSError **)error
 {
+	return [self loadSoundfontFromFileAtURL:fileURL presetID:0 error:error];
+}
+
+- (BOOL)loadSoundfontFromFileAtURL:(NSURL *)fileURL presetID:(u_char)presetID error:(NSError **)error
+{
 	error = error ? error : &(NSError *__autoreleasing){ nil };
 	OSStatus err = noErr;
 	
@@ -144,7 +149,7 @@
 		instrumentData.instrumentType = [typesByFileExtension[[fileURL pathExtension]] intValue];
 		instrumentData.bankMSB  = kAUSampler_DefaultMelodicBankMSB;
 		instrumentData.bankLSB  = kAUSampler_DefaultBankLSB;
-		instrumentData.presetID = 0;
+		instrumentData.presetID = presetID;
 		
 		// set the kAUSamplerProperty_LoadPresetFromBank property
 		err = AudioUnitSetProperty(self.instrumentUnit,

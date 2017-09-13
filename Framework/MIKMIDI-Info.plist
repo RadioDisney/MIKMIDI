@@ -24,5 +24,7 @@
 	<string>Copyright © 2013-2015 Mixed In Key. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string></string>
+	<key>UIFileSharingEnabled</key>
+	<true/>
 </dict>
 </plist>
